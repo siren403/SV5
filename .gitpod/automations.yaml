@@ -9,6 +9,14 @@ tasks:
         # - postDevcontainerStart
 
 services:
+    dev:
+        name: Develop Service
+        description: npm run dev
+        commands:
+            start: |
+                npm run dev -- --host 0.0.0.0
+        triggeredBy:
+            - postDevcontainerStart
     backend:
         name: Backend Service
         description: Example service simulating a backend
