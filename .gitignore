@@ -1,3 +1,5 @@
+.gitpod/**/*.env
+
 node_modules
 
 # Output

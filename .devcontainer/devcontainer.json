@@ -19,7 +19,10 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"dbaeumer.vscode-eslint"
+				"dbaeumer.vscode-eslint",
+				"svelte.svelte-vscode",
+				"bradlc.vscode-tailwindcss",
+				"vivaxy.vscode-conventional-commits"
 			]
 		}
 	},
@@ -27,13 +30,7 @@
 	"forwardPorts": [
 		5173
 	],
-	"remoteEnv": {
-		"GITPOD_PROFILE": "${localEnv:GITPOD_PROFILE:gp}"
-	},
-	"postAttachCommand": {
-		"env": "env",
-		"gp": "echo $GITPOD_PROFILE"
-	},
+	"postAttachCommand": {},
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": {},
 	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.

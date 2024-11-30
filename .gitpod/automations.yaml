@@ -7,7 +7,12 @@ tasks:
         - manual
         # - postEnvironmentStart
         # - postDevcontainerStart
-
+    setup-git-user:
+        name: Setup git user
+        command: |
+            source .gitpod/git.env && 
+            git config --global user.name $USER_NAME && 
+            git config --global user.email $USER_EMAIL
 services:
     dev:
         name: Develop Service
