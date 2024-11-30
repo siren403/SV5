@@ -1,8 +1,8 @@
 <script lang="ts">
     import Button from "$lib/components/ui/button/button.svelte";
     import * as Card from "$lib/components/ui/card";
-    import Label from "$lib/components/ui/label/label.svelte";
     import Checkbox from "$lib/components/ui/checkbox/checkbox.svelte";
+    import Label from "$lib/components/ui/label/label.svelte";
     import type { Task } from "../types";
 
     const {
@@ -17,17 +17,8 @@
 </script>
 
 <section>
-    {#each tasks as task}
-        <span>{task.id}</span>
-        <label>
-            <input
-                type="checkbox"
-                checked={task.done}
-                onchange={() => toggleDone(task)}
-            />
-            {task.title}
-        </label>
-        <Card.Root id={task.id} class="my-1">
+    {#each tasks as task (task.id)}
+        <Card.Root class="my-1">
             <Card.Content class="flex justify-between items-center">
                 <span class:done={task.done}>
                     <Checkbox
