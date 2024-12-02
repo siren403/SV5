@@ -7,6 +7,13 @@
             "problemMatcher": [],
             "label": "npm: dev",
             "detail": "vite dev"
+        },
+        {
+            "label": "Update automations",
+            "detail": "gitpod auto update",
+            "type": "shell",
+            "command": "gitpod auto update .gitpod/automations.yaml",
+            "problemMatcher": []
         }
     ]
 }

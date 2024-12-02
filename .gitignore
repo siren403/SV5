@@ -1,4 +1,4 @@
-.gitpod/**/*.env
+.env
 
 node_modules
 
